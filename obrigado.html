@@ -1,61 +1,71 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plano Enviado!</title>
+  <title>Obrigado pela sua inscrição!</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f4f8f9;
-      color: #2c3e50;
-      padding: 60px 20px;
+      background: linear-gradient(135deg, #fef6f9, #e4f1f9);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
       text-align: center;
     }
-    .box {
-      max-width: 500px;
-      margin: 0 auto;
+
+    .container {
       background: white;
       padding: 40px;
       border-radius: 16px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+      animation: fadeIn 1s ease;
     }
+
     h1 {
-      font-size: 26px;
+      color: #c44569;
       margin-bottom: 20px;
-      color: #27ae60;
+      font-size: 1.8rem;
     }
+
     p {
-      font-size: 17px;
+      font-size: 1.1rem;
       margin-bottom: 30px;
     }
+
     a.botao {
-      background-color: #27ae60;
+      display: inline-block;
+      padding: 12px 24px;
+      background: #c44569;
       color: white;
       text-decoration: none;
-      padding: 14px 28px;
+      font-weight: bold;
       border-radius: 8px;
-      font-size: 16px;
-      display: inline-block;
+      transition: background 0.3s ease;
     }
+
     a.botao:hover {
-      background-color: #1e874c;
+      background: #a43757;
     }
-    .spoiler {
-      margin-top: 40px;
-      font-style: italic;
-      font-size: 15px;
-      color: #7f8c8d;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>Seu plano está pronto!</h1>
-    <p>Agora é só clicar no botão abaixo para fazer o download gratuito do seu material.</p>
-    <a href="https://drive.google.com/uc?export=download&id=1WswEWedEzgIqLmQdNuP_QZWoNisBMUr_" class="botao" target="_blank">Baixar Plano 7x7</a>
-    <p class="spoiler">Na última página do plano falamos um pouco sobre o nosso conteúdo completo do Plano 7x7… 😉</p>
+  <div class="container">
+    <h1>Pronto! Seu bônus está disponível 🎁</h1>
+    <p>Você já pode acessar o material exclusivo que preparamos com muito carinho para você.</p>
+    <a class="botao" href="https://drive.google.com/file/d/1WswEWedEzgIqLmQdNuP_QZWoNisBMUr_/view" target="_blank">Baixar o Bônus Agora</a>
+    <p style="margin-top: 20px; font-size: 0.95rem;">* Aproveite para ver o conteúdo até o final — na última página falamos sobre o <strong>Plano 7x7</strong>.</p>
   </div>
 </body>
 </html>
