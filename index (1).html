@@ -1,0 +1,71 @@
+
+<!-- Página 1: Captura de e-mail com FormSubmit -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receba o Plano 7x7</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8f0;
+      color: #333;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+    input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #f76b8a;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e05977;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Acesse o Plano 7x7 gratuito</h1>
+    <p>Digite seu e-mail abaixo para receber seu plano completo e transformar sua alimentação com leveza.</p>
+    <form action="https://formsubmit.co/blog.digitalrenda@gmail.com" method="POST">
+      <input type="hidden" name="_next" value="https://plano7x7.vercel.app/obrigado.html">
+      <input type="email" name="email" required placeholder="Digite seu e-mail">
+      <button type="submit">Receber agora</button>
+    </form>
+  </div>
+</body>
+</html>
