@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Obrigado pela sua inscrição!</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seu Bônus Está Liberado 🎁</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -24,11 +24,11 @@
     }
 
     .container {
-      background: white;
-      padding: 40px;
+      background: #ffffff;
+      padding: 40px 30px;
       border-radius: 16px;
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
+      max-width: 520px;
       width: 100%;
       animation: fadeIn 1s ease;
     }
@@ -36,27 +36,55 @@
     h1 {
       color: #c44569;
       margin-bottom: 20px;
-      font-size: 1.8rem;
+      font-size: 1.9rem;
     }
 
     p {
       font-size: 1.1rem;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+    }
+
+    .valor-bonus {
+      background: #fff5f8;
+      border: 1px dashed #f76b8a;
+      padding: 15px 20px;
+      margin: 25px 0;
+      border-radius: 10px;
+      color: #b03558;
+      font-size: 1rem;
     }
 
     a.botao {
       display: inline-block;
-      padding: 12px 24px;
+      padding: 14px 26px;
       background: #c44569;
       color: white;
       text-decoration: none;
       font-weight: bold;
       border-radius: 8px;
+      font-size: 1rem;
       transition: background 0.3s ease;
+      margin-top: 15px;
     }
 
     a.botao:hover {
       background: #a43757;
+    }
+
+    .cta-secundaria {
+      margin-top: 30px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .cta-secundaria a {
+      color: #c44569;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .cta-secundaria a:hover {
+      text-decoration: underline;
     }
 
     @keyframes fadeIn {
@@ -67,10 +95,19 @@
 </head>
 <body>
   <div class="container">
-    <h1>Pronto! Seu bônus está disponível 🎁</h1>
-    <p>Você já pode acessar o material exclusivo que preparamos com muito carinho para você.</p>
+    <h1>🎁 Pronto! Seu bônus está liberado</h1>
+    <p>Você já pode acessar o material completo e começar sua transformação com leveza e consciência.</p>
+
+    <div class="valor-bonus">
+      Este material, se vendido separadamente, poderia custar <strong>R$27</strong> — mas hoje ele é seu gratuitamente.
+    </div>
+
     <a class="botao" href="https://drive.google.com/file/d/1WswEWedEzgIqLmQdNuP_QZWoNisBMUr_/view" target="_blank">Baixar o Bônus Agora</a>
-    <p style="margin-top: 20px; font-size: 0.95rem;">* Aproveite para ver o conteúdo até o final — na última página falamos sobre o <strong>Plano 7x7</strong>.</p>
+
+    <p class="cta-secundaria">
+      👀 Não quer esperar até o final do material?<br />
+      <a href="https://plano7x7.vercel.app">Clique aqui para conhecer o Plano 7x7 agora mesmo</a>.
+    </p>
   </div>
 </body>
 </html>
