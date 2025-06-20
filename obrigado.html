@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seu Bônus Está Liberado 🎁</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-  <link rel="manifest" href="site.webmanifest" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <!-- Favicons iguais aos da captura -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <style>
     * {
       margin: 0;
@@ -20,14 +21,12 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #fff8f0 0%, #fce8d5 100%);
       color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      line-height: 1.6;
       padding: 0;
       margin: 0;
-      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     .urgent-banner {
@@ -38,7 +37,6 @@
       font-weight: 700;
       font-size: 17px;
       box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
-      width: 100%;
     }
 
     .container {
@@ -50,6 +48,7 @@
       box-shadow: 0 12px 35px rgba(231, 76, 60, 0.15);
       position: relative;
       overflow: hidden;
+      flex-grow: 1;
       animation: fadeIn 1s ease;
     }
 
@@ -166,6 +165,7 @@
       50% { transform: scale(1.03); }
       100% { transform: scale(1); }
     }
+    
     .pulse {
       animation: pulse 2s infinite;
     }
