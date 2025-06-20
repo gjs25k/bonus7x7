@@ -3,53 +3,221 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🎁 Bônus Liberado + Oferta Exclusiva | Plano 7x7</title>
+  <title>Seu Bônus Está Liberado 🎁</title>
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <style>
-    /* ... (estilos mantidos) ... */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #fff8f0 0%, #fce8d5 100%);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .urgent-banner {
+      background: #e74c3c;
+      color: white;
+      text-align: center;
+      padding: 14px;
+      font-weight: 700;
+      font-size: 17px;
+      box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+      width: 100%;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 30px auto;
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 12px 35px rgba(231, 76, 60, 0.15);
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1s ease;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #f76b8a, #e74c3c);
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #c44569;
+      margin-bottom: 15px;
+      line-height: 1.3;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .bonus-box {
+      background: #fdf6f8;
+      border: 2px dashed #f76b8a;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 25px 0;
+    }
+
+    .valor-bonus {
+      font-size: 18px;
+      color: #b03558;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .cta-button {
+      display: block;
+      width: 100%;
+      background: linear-gradient(to right, #f76b8a, #e74c3c);
+      color: white;
+      border: none;
+      padding: 18px;
+      font-size: 19px;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+      text-align: center;
+      text-decoration: none;
+      margin: 25px 0;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
+    }
+
+    .cta-secundaria {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #555;
+      text-align: center;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 10px;
+    }
+
+    .cta-secundaria a {
+      color: #e74c3c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .cta-secundaria a:hover {
+      text-decoration: underline;
+    }
+
+    .security {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 25px;
+      font-size: 14px;
+      color: #666;
+      padding: 14px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #999;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px 15px;
+        padding: 30px 20px;
+      }
+      
+      h1 {
+        font-size: 24px;
+      }
+      
+      .cta-button {
+        font-size: 17px;
+        padding: 16px;
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="urgent-banner">
+    🎉 PARABÉNS! Seu bônus foi liberado com sucesso
+  </div>
+  
   <div class="container">
-    <div class="offer-badge">EXCLUSIVO</div>
-    
-    <h1>🎉 PARABÉNS! Seu bônus está liberado</h1>
-    <p class="subtitle">Guia 6 + Desafio 7 Dias + Bônus Extra</p>
-    
-    <div class="bonus-access">
-      <h2>ACESSO IMEDIATO AO SEU PACOTE:</h2>
-      <a class="cta-button pulse" href="https://drive.google.com/file/d/1WswEWedEzgIqLmQdNuP_QZWoNisBMUr_/view" target="_blank">⬇️ BAIXAR BÔNUS AGORA</a>
-      <p><strong>Dica profissional:</strong> Comece pelo <strong>Guia 6</strong> para entender sua ansiedade alimentar!</p>
+    <h1>🎁 Pronto! Seu bônus está liberado</h1>
+    <p>Você já pode acessar o material completo e começar sua transformação com leveza e consciência.</p>
+
+    <div class="bonus-box">
+      <p class="valor-bonus">
+        Este material, se vendido separadamente, poderia custar <strong>R$27</strong> — mas hoje ele é seu gratuitamente.
+      </p>
+    </div>
+
+    <a class="cta-button pulse" href="https://drive.google.com/file/d/1WswEWedEzgIqLmQdNuP_QZWoNisBMUr_/view" target="_blank">
+      BAIXAR MEU BÔNUS AGORA
+    </a>
+
+    <div class="cta-secundaria">
+      👀 Não quer esperar até o final do material?<br />
+      <a href="https://plano7x7.vercel.app">Clique aqui para conhecer o Plano 7x7 agora mesmo</a>
+    </div>
+
+    <div class="security">
+      🔒 Seu acesso está 100% garantido. Dúvidas? contato@plano7x7.com
     </div>
     
-    <div class="testimonial">
-      <p class="testimonial-text">"O Guia 6 mudou minha relação com a comida! Em 7 dias entendi meus gatilhos emocionais e reduzi 80% das compulsões. O desafio do Guia 7 foi a cereja do bolo!"</p>
-      <p class="testimonial-author">- Ana Clara, 32 anos</p>
+    <div class="footer">
+      Plano 7x7 © 2025 - Transformando vidas através da alimentação consciente
     </div>
-    
-    <div class="offer-box">
-      <h3 class="offer-header">OFERTA ESPECIAL APENAS PARA VOCÊ!</h3>
-      <p>Enquanto seu bônus é processado, temos uma proposta irresistível:</p>
-      
-      <ul class="offer-list">
-        <li><strong>Acesso completo</strong> ao Plano 7x7 (todos os 8 guias)</li>
-        <li><strong>Método passo a passo</strong> para 7 semanas de transformação</li>
-        <li><strong>Planner exclusivo</strong> para organização alimentar</li>
-        <li><strong>Bônus extra:</strong> Lista de Compras Inteligente (PDF editável)</li>
-      </ul>
-      
-      <div class="countdown">
-        ⏰ OFERTA VÁLIDA POR: <span id="timer">60:00</span>
-      </div>
-      
-      <div class="pricing">
-        <div class="old-price">De R$197</div>
-        <div class="new-price">R$97</div>
-        <p>Economize 51% - Apenas para quem resgatou o bônus!</p>
-      </div>
-      
-      <a href="https://pay.kir
+  </div>
+</body>
+</html>
