@@ -23,6 +23,9 @@
       line-height: 1.6;
       padding: 0;
       margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     .urgent-banner {
@@ -44,6 +47,10 @@
       box-shadow: 0 12px 35px rgba(231, 76, 60, 0.15);
       position: relative;
       overflow: hidden;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .container::before {
@@ -64,12 +71,9 @@
       text-align: center;
     }
 
-    .subtitle {
-      font-size: 19px;
-      color: #e74c3c;
-      font-weight: 700;
-      margin-bottom: 25px;
-      line-height: 1.4;
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
       text-align: center;
     }
 
@@ -78,71 +82,112 @@
       border: 2px dashed #f76b8a;
       border-radius: 12px;
       padding: 25px;
-      margin-bottom: 30px;
+      margin: 25px 0;
     }
 
-    .bonus-items {
-      text-align: left;
+    .valor-bonus {
+      font-size: 18px;
+      color: #b03558;
+      font-weight: 600;
+      text-align: center;
     }
 
-    .bonus-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 18px;
-    }
-
-    .bonus-icon {
-      min-width: 36px;
-      height: 36px;
-      background: #f76b8a;
+    .cta-button {
+      display: block;
+      width: 100%;
+      background: linear-gradient(to right, #f76b8a, #e74c3c);
       color: white;
-      border-radius: 50%;
+      border: none;
+      padding: 18px;
+      font-size: 19px;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+      text-align: center;
+      text-decoration: none;
+      margin: 25px 0;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
+    }
+
+    .cta-secundaria {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #555;
+      text-align: center;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 10px;
+    }
+
+    .cta-secundaria a {
+      color: #e74c3c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .cta-secundaria a:hover {
+      text-decoration: underline;
+    }
+
+    .security {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: bold;
-      font-size: 20px;
-      margin-right: 15px;
-    }
-
-    .bonus-content h3 {
-      font-size: 18px;
-      margin-bottom: 4px;
-      color: #b03558;
-    }
-
-    .bonus-content p {
-      font-size: 15px;
+      gap: 10px;
+      margin-top: 25px;
+      font-size: 14px;
       color: #666;
-    }
-
-    .countdown {
-      background: #2c3e50;
-      color: white;
-      padding: 14px;
-      border-radius: 10px;
-      text-align: center;
-      margin: 25px 0;
-      font-weight: bold;
-      font-size: 19px;
-    }
-
-    .social-proof {
-      font-size: 16px;
-      color: #555;
-      margin-bottom: 25px;
       padding: 14px;
       background: #f8f9fa;
       border-radius: 10px;
-      font-weight: 600;
       text-align: center;
-      border: 1px solid #eee;
     }
 
-    .social-proof strong {
-      color: #e74c3c;
+    .footer {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #999;
+      text-align: center;
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px 15px;
+        padding: 30px 20px;
+      }
+      
+      h1 {
+        font-size: 24px;
+      }
+      
+      .cta-button {
+        font-size: 17px;
+        padding: 16px;
+      }
+    }
+    
+    /* Formulário corrigido */
     .email-form {
       margin-bottom: 20px;
     }
@@ -173,143 +218,110 @@
       outline: none;
       box-shadow: 0 0 0 4px rgba(247, 107, 138, 0.2);
     }
-
-    .cta-button {
-      display: block;
-      width: 100%;
-      background: linear-gradient(to right, #f76b8a, #e74c3c);
-      color: white;
-      border: none;
-      padding: 18px;
-      font-size: 19px;
-      font-weight: 700;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: all 0.3s;
-      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
-      text-align: center;
-      text-decoration: none;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
-    }
-
-    .security {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 25px;
-      font-size: 14px;
-      color: #666;
-      padding: 14px;
-      background: #f8f9fa;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .footer {
-      margin-top: 25px;
-      font-size: 14px;
-      color: #999;
-      text-align: center;
-    }
     
-    /* Animação para o botão */
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.03); }
-      100% { transform: scale(1); }
-    }
-    .pulse {
-      animation: pulse 2s infinite;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        margin: 20px 15px;
-        padding: 30px 20px;
-      }
-      
-      h1 {
-        font-size: 24px;
-      }
-      
-      .subtitle {
-        font-size: 17px;
-      }
-      
-      .cta-button {
-        font-size: 17px;
-        padding: 16px;
-      }
+    .container.obrigado {
+      animation: fadeIn 1s ease;
     }
   </style>
 </head>
 <body>
-  <div class="urgent-banner">
-    ⚠️ BÔNUS GRÁTIS APENAS PARA AS PRÓXIMAS <span id="counter">20</span> PESSOAS!
+  <!-- Página de captura -->
+  <div class="capture-page">
+    <div class="urgent-banner">
+      ⚠️ BÔNUS GRÁTIS APENAS PARA AS PRÓXIMAS <span id="counter">20</span> PESSOAS!
+    </div>
+    
+    <div class="container">
+      <h1>DOMINE SUA ANSIEDADE ALIMENTAR EM 7 DIAS!</h1>
+      <p class="subtitle">Guia 6 + Desafio 7 Dias GRÁTIS + Bônus Exclusivo</p>
+      
+      <div class="bonus-box">
+        <div class="bonus-items">
+          <div class="bonus-item">
+            <div class="bonus-icon">6</div>
+            <div class="bonus-content">
+              <h3>Guia 6: Domine a Ansiedade Alimentar</h3>
+              <p>Identifique gatilhos emocionais e quebre o ciclo compulsivo</p>
+            </div>
+          </div>
+          
+          <div class="bonus-item">
+            <div class="bonus-icon">7</div>
+            <div class="bonus-content">
+              <h3>Guia 7: Desafio de 7 Dias</h3>
+              <p>Passo a passo prático para resultados imediatos</p>
+            </div>
+          </div>
+          
+          <div class="bonus-item">
+            <div class="bonus-icon">+</div>
+            <div class="bonus-content">
+              <h3>Bônus: Checklist Anti-Compulsão</h3>
+              <p>Ferramenta prática para dias desafiadores</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="countdown">
+          ⏰ OFERTA VÁLIDA POR: <span id="timer">24:00:00</span>
+        </div>
+      </div>
+
+      <div class="social-proof">
+        <strong>✨ 47 mulheres</strong> já resgataram este bônus hoje!
+      </div>
+
+      <form class="email-form" id="capture-form">
+        <div class="form-group">
+          <label for="email">Digite seu melhor e-mail:</label>
+          <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+        </div>
+        
+        <button type="submit" class="cta-button pulse">🚀 QUERO MEU BÔNUS GRÁTIS AGORA!</button>
+      </form>
+
+      <div class="security">
+        🔒 Seus dados estão 100% seguros. Respeitamos sua privacidade.
+      </div>
+      
+      <div class="footer">
+        Plano 7x7 © 2025 - Transformando vidas através da alimentação consciente
+      </div>
+    </div>
   </div>
   
-  <div class="container">
-    <h1>DOMINE SUA ANSIEDADE ALIMENTAR EM 7 DIAS!</h1>
-    <p class="subtitle">Guia 6 + Desafio 7 Dias GRÁTIS + Bônus Exclusivo</p>
-    
-    <div class="bonus-box">
-      <div class="bonus-items">
-        <div class="bonus-item">
-          <div class="bonus-icon">6</div>
-          <div class="bonus-content">
-            <h3>Guia 6: Domine a Ansiedade Alimentar</h3>
-            <p>Identifique gatilhos emocionais e quebre o ciclo compulsivo</p>
-          </div>
-        </div>
-        
-        <div class="bonus-item">
-          <div class="bonus-icon">7</div>
-          <div class="bonus-content">
-            <h3>Guia 7: Desafio de 7 Dias</h3>
-            <p>Passo a passo prático para resultados imediatos</p>
-          </div>
-        </div>
-        
-        <div class="bonus-item">
-          <div class="bonus-icon">+</div>
-          <div class="bonus-content">
-            <h3>Bônus: Checklist Anti-Compulsão</h3>
-            <p>Ferramenta prática para dias desafiadores</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="countdown">
-        ⏰ OFERTA VÁLIDA POR: <span id="timer">24:00:00</span>
-      </div>
-    </div>
-
-    <div class="social-proof">
-      <strong>✨ 47 mulheres</strong> já resgataram este bônus hoje!
-    </div>
-
-    <form class="email-form" action="https://formsubmit.co/blog.digitalrenda@gmail.com" method="POST">
-      <input type="hidden" name="_next" value="https://bonus7x7.vercel.app/obrigado.html">
-      
-      <div class="form-group">
-        <label for="email">Digite seu melhor e-mail:</label>
-        <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
-      </div>
-      
-      <button type="submit" class="cta-button pulse">🚀 QUERO MEU BÔNUS GRÁTIS AGORA!</button>
-    </form>
-
-    <div class="security">
-      🔒 Seus dados estão 100% seguros. Respeitamos sua privacidade.
+  <!-- Página de obrigado (inicialmente oculta) -->
+  <div class="thankyou-page" style="display: none;">
+    <div class="urgent-banner">
+      🎉 PARABÉNS! Seu bônus foi liberado com sucesso
     </div>
     
-    <div class="footer">
-      Plano 7x7 © 2025 - Transformando vidas através da alimentação consciente
+    <div class="container obrigado">
+      <h1>🎁 Pronto! Seu bônus está liberado</h1>
+      <p>Você já pode acessar o material completo e começar sua transformação com leveza e consciência.</p>
+
+      <div class="bonus-box">
+        <p class="valor-bonus">
+          Este material, se vendido separadamente, poderia custar <strong>R$27</strong> — mas hoje ele é seu gratuitamente.
+        </p>
+      </div>
+
+      <a class="cta-button pulse" href="https://drive.google.com/file/d/1WswEWedEzgIqLmQdNuP_QZWoNisBMUr_/view" target="_blank">
+        BAIXAR MEU BÔNUS AGORA
+      </a>
+
+      <div class="cta-secundaria">
+        👀 Não quer esperar até o final do material?<br />
+        <a href="https://plano7x7.vercel.app">Clique aqui para conhecer o Plano 7x7 agora mesmo</a>
+      </div>
+
+      <div class="security">
+        🔒 Seu acesso está 100% garantido. Dúvidas? contato@plano7x7.com
+      </div>
+      
+      <div class="footer">
+        Plano 7x7 © 2025 - Transformando vidas através da alimentação consciente
+      </div>
     </div>
   </div>
 
@@ -351,6 +363,29 @@
     // Iniciar contadores
     updateTimer();
     const timerInterval = setInterval(updateTimer, 1000);
+    
+    // Form submission
+    document.getElementById('capture-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Validar e-mail
+      const email = document.getElementById('email').value;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+      if (!emailRegex.test(email)) {
+        alert('Por favor, insira um e-mail válido.');
+        return;
+      }
+      
+      // Simular envio (em produção, enviaria para o servidor)
+      setTimeout(() => {
+        // Esconder página de captura
+        document.querySelector('.capture-page').style.display = 'none';
+        
+        // Mostrar página de obrigado
+        document.querySelector('.thankyou-page').style.display = 'block';
+      }, 1000);
+    });
   </script>
 </body>
 </html>
