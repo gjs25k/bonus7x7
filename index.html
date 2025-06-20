@@ -10,7 +10,242 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <style>
-    /* ... (estilos mantidos) ... */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #fff8f0 0%, #fce8d5 100%);
+      color: #333;
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+    }
+
+    .urgent-banner {
+      background: #e74c3c;
+      color: white;
+      text-align: center;
+      padding: 14px;
+      font-weight: 700;
+      font-size: 17px;
+      box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 30px auto;
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 12px 35px rgba(231, 76, 60, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #f76b8a, #e74c3c);
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #c44569;
+      margin-bottom: 15px;
+      line-height: 1.3;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 19px;
+      color: #e74c3c;
+      font-weight: 700;
+      margin-bottom: 25px;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .bonus-box {
+      background: #fdf6f8;
+      border: 2px dashed #f76b8a;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+
+    .bonus-items {
+      text-align: left;
+    }
+
+    .bonus-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+    .bonus-icon {
+      min-width: 36px;
+      height: 36px;
+      background: #f76b8a;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+      margin-right: 15px;
+    }
+
+    .bonus-content h3 {
+      font-size: 18px;
+      margin-bottom: 4px;
+      color: #b03558;
+    }
+
+    .bonus-content p {
+      font-size: 15px;
+      color: #666;
+    }
+
+    .countdown {
+      background: #2c3e50;
+      color: white;
+      padding: 14px;
+      border-radius: 10px;
+      text-align: center;
+      margin: 25px 0;
+      font-weight: bold;
+      font-size: 19px;
+    }
+
+    .social-proof {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 25px;
+      padding: 14px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      font-weight: 600;
+      text-align: center;
+      border: 1px solid #eee;
+    }
+
+    .social-proof strong {
+      color: #e74c3c;
+    }
+
+    .email-form {
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #555;
+      font-size: 16px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 16px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 2px solid #e0e0e0;
+      transition: all 0.3s;
+    }
+
+    .form-group input:focus {
+      border-color: #f76b8a;
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(247, 107, 138, 0.2);
+    }
+
+    .cta-button {
+      display: block;
+      width: 100%;
+      background: linear-gradient(to right, #f76b8a, #e74c3c);
+      color: white;
+      border: none;
+      padding: 18px;
+      font-size: 19px;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
+    }
+
+    .security {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 25px;
+      font-size: 14px;
+      color: #666;
+      padding: 14px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #999;
+      text-align: center;
+    }
+    
+    /* Animação para o botão */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px 15px;
+        padding: 30px 20px;
+      }
+      
+      h1 {
+        font-size: 24px;
+      }
+      
+      .subtitle {
+        font-size: 17px;
+      }
+      
+      .cta-button {
+        font-size: 17px;
+        padding: 16px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -20,14 +255,34 @@
   
   <div class="container">
     <h1>DOMINE SUA ANSIEDADE ALIMENTAR EM 7 DIAS!</h1>
-    <p class="subtitle">Guia 6 + Desafio 7 Dias GRÁTIS</p>
+    <p class="subtitle">Guia 6 + Desafio 7 Dias GRÁTIS + Bônus Exclusivo</p>
     
     <div class="bonus-box">
-      <ul>
-        <li><strong>Guia 6:</strong> Identifique gatilhos emocionais e quebre o ciclo compulsivo</li>
-        <li><strong>Guia 7:</strong> Passo a passo prático para resultados imediatos</li>
-        <li><strong>Bônus Extra:</strong> Checklist de organização alimentar</li>
-      </ul>
+      <div class="bonus-items">
+        <div class="bonus-item">
+          <div class="bonus-icon">6</div>
+          <div class="bonus-content">
+            <h3>Guia 6: Domine a Ansiedade Alimentar</h3>
+            <p>Identifique gatilhos emocionais e quebre o ciclo compulsivo</p>
+          </div>
+        </div>
+        
+        <div class="bonus-item">
+          <div class="bonus-icon">7</div>
+          <div class="bonus-content">
+            <h3>Guia 7: Desafio de 7 Dias</h3>
+            <p>Passo a passo prático para resultados imediatos</p>
+          </div>
+        </div>
+        
+        <div class="bonus-item">
+          <div class="bonus-icon">+</div>
+          <div class="bonus-content">
+            <h3>Bônus: Checklist Anti-Compulsão</h3>
+            <p>Ferramenta prática para dias desafiadores</p>
+          </div>
+        </div>
+      </div>
       
       <div class="countdown">
         ⏰ OFERTA VÁLIDA POR: <span id="timer">24:00:00</span>
@@ -38,10 +293,15 @@
       <strong>✨ 47 mulheres</strong> já resgataram este bônus hoje!
     </div>
 
-    <form action="https://formsubmit.co/blog.digitalrenda@gmail.com" method="POST">
+    <form class="email-form" action="https://formsubmit.co/blog.digitalrenda@gmail.com" method="POST">
       <input type="hidden" name="_next" value="https://bonus7x7.vercel.app/obrigado.html">
-      <input type="email" name="email" required placeholder="Digite seu melhor e-mail">
-      <button type="submit" class="pulse">🚀 QUERO MEU BÔNUS AGORA!</button>
+      
+      <div class="form-group">
+        <label for="email">Digite seu melhor e-mail:</label>
+        <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+      </div>
+      
+      <button type="submit" class="cta-button pulse">🚀 QUERO MEU BÔNUS GRÁTIS AGORA!</button>
     </form>
 
     <div class="security">
@@ -54,7 +314,43 @@
   </div>
 
   <script>
-    // ... (script mantido) ...
+    // Contador regressivo de 24 horas
+    let countdown = 24 * 60 * 60; // 24 horas em segundos
+    
+    function updateTimer() {
+      const hours = Math.floor(countdown / 3600);
+      const minutes = Math.floor((countdown % 3600) / 60);
+      const seconds = countdown % 60;
+      
+      document.getElementById('timer').innerText = 
+        `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      
+      if (countdown <= 0) {
+        clearInterval(timerInterval);
+      } else {
+        countdown--;
+      }
+    }
+    
+    // Contador de vagas (diminui aleatoriamente)
+    let peopleCount = 20;
+    setInterval(() => {
+      if (peopleCount > 3) {
+        peopleCount -= Math.floor(Math.random() * 2) + 1;
+        document.getElementById('counter').textContent = peopleCount;
+      }
+    }, 15000);
+    
+    // Atualiza o número de pessoas que resgataram
+    let userCount = 47;
+    setInterval(() => {
+      userCount += Math.floor(Math.random() * 3) + 1;
+      document.querySelector('.social-proof strong').textContent = userCount + " mulheres";
+    }, 8000);
+    
+    // Iniciar contadores
+    updateTimer();
+    const timerInterval = setInterval(updateTimer, 1000);
   </script>
 </body>
 </html>
