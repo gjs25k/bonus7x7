@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plano 7x7 | Alimentação com Leveza</title>
+  <title>BÔNUS GRÁTIS: Controle Sua Ansiedade Alimentar em 7 Dias | Plano 7x7</title>
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -12,10 +12,19 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #fff8f0;
+      background: linear-gradient(135deg, #fff8f0 0%, #fce8d5 100%);
       color: #333;
       text-align: center;
       padding: 60px 20px;
+      margin: 0;
+    }
+    .urgent-banner {
+      background: #e74c3c;
+      color: white;
+      padding: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 30px;
     }
     .container {
       max-width: 460px;
@@ -23,102 +32,225 @@
       background: #ffffff;
       padding: 35px 30px;
       border-radius: 14px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 30px rgba(231, 76, 60, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #f76b8a, #e74c3c);
     }
     h1 {
-      font-size: 24px;
+      font-size: 26px;
       color: #c44569;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      line-height: 1.3;
     }
-    h2 {
+    .subtitle {
       font-size: 18px;
-      color: #555;
+      color: #e74c3c;
+      font-weight: 600;
       margin-bottom: 25px;
       line-height: 1.4;
     }
+    .bonus-box {
+      background: #fdf6f8;
+      border: 2px dashed #f76b8a;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
     ul {
       text-align: left;
-      margin: 0 auto 20px;
+      margin: 0 auto;
       padding-left: 0;
-      max-width: 360px;
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.6;
       color: #444;
     }
     ul li {
       list-style: none;
-      margin-bottom: 10px;
-      padding-left: 20px;
+      margin-bottom: 12px;
+      padding-left: 30px;
       position: relative;
     }
     ul li::before {
-      content: "✔️";
+      content: "✓";
       position: absolute;
       left: 0;
-      color: #f76b8a;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      background: #f76b8a;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
     }
-    .urgency {
+    .countdown {
+      background: #2c3e50;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 20px 0;
+      font-size: 18px;
+    }
+    .social-proof {
       font-size: 14px;
-      color: #c0392b;
-      font-weight: 500;
-      margin-bottom: 20px;
-    }
-    .trust {
-      font-size: 13px;
       color: #777;
       margin-bottom: 25px;
+      padding: 12px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .social-proof strong {
+      color: #e74c3c;
     }
     input[type="email"] {
       width: 100%;
-      padding: 14px;
+      padding: 16px;
       font-size: 16px;
       margin-bottom: 20px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+      border-radius: 10px;
+      border: 2px solid #e0e0e0;
+      transition: all 0.3s;
+    }
+    input[type="email"]:focus {
+      border-color: #f76b8a;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(247, 107, 138, 0.2);
     }
     button {
-      background-color: #f76b8a;
+      background: linear-gradient(to right, #f76b8a, #e74c3c);
       color: white;
       border: none;
-      padding: 14px 24px;
-      font-size: 16px;
-      border-radius: 8px;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 10px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: all 0.3s;
+      width: 100%;
+      box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
     }
     button:hover {
-      background-color: #e05574;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
+    }
+    .security {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #777;
     }
     .footer {
       margin-top: 25px;
       font-size: 13px;
       color: #aaa;
     }
+    
+    /* Animação para o contador */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .pulse {
+      animation: pulse 2s infinite;
+      display: inline-block;
+    }
   </style>
 </head>
 <body>
+  <div class="urgent-banner">
+    ⚠️ BÔNUS GRÁTIS APENAS PARA AS PRÓXIMAS <span id="counter">20</span> PESSOAS!
+  </div>
+  
   <div class="container">
-    <h1>Você come por fome… ou por impulso?</h1>
-    <h2>Receba agora o plano gratuito que ajuda mulheres ocupadas a mudarem sua alimentação com leveza, mesmo na rotina corrida.</h2>
+    <h1>DOMINE SUA ANSIEDADE ALIMENTAR EM 7 DIAS!</h1>
+    <p class="subtitle">Guia 6 + Desafio 7 Dias GRÁTIS</p>
+    
+    <div class="bonus-box">
+      <ul>
+        <li><strong>Guia 6:</strong> Identifique gatilhos emocionais e quebre o ciclo compulsivo</li>
+        <li><strong>Guia 7:</strong> Passo a passo prático para resultados imediatos</li>
+        <li><strong>Bônus:</strong> Vídeo "Respire Antes de Comer" (técnica de 5 minutos)</li>
+      </ul>
+      
+      <div class="countdown">
+        ⏰ OFERTA VÁLIDA POR: <span id="timer">24:00:00</span>
+      </div>
+    </div>
 
-    <ul>
-      <li>3 cardápios inteligentes prontos</li>
-      <li>5 receitas rápidas e gostosas</li>
-      <li>Lanches anti-ansiedade</li>
-      <li>Checklist de organização alimentar</li>
-      <li>Dicas práticas pra comer bem mesmo sem tempo</li>
-    </ul>
-
-    <p class="urgency">Disponível gratuitamente por tempo limitado.</p>
-    <p class="trust">Mais de 200 mulheres já baixaram nas últimas semanas!</p>
+    <div class="social-proof">
+      <strong>✨ 47 mulheres</strong> já resgataram este bônus hoje!
+    </div>
 
     <form action="https://formsubmit.co/blog.digitalrenda@gmail.com" method="POST">
       <input type="hidden" name="_next" value="https://bonus7x7.vercel.app/obrigado.html">
       <input type="email" name="email" required placeholder="Digite seu melhor e-mail">
-      <button type="submit">Quero meu plano agora</button>
+      <button type="submit" class="pulse">🚀 QUERO MEU BÔNUS AGORA!</button>
     </form>
 
-    <p class="footer">Você receberá acesso imediato ao conteúdo — sem precisar abrir seu e-mail.</p>
+    <div class="security">
+      🔒 Seus dados estão 100% seguros. Respeitamos sua privacidade.
+    </div>
+    
+    <div class="footer">
+      Plano 7x7 © 2025 - Transformando vidas através da alimentação consciente
+    </div>
   </div>
+
+  <script>
+    // Contador regressivo de 24 horas
+    let countdown = 24 * 60 * 60; // 24 horas em segundos
+    
+    function updateTimer() {
+      const hours = Math.floor(countdown / 3600);
+      const minutes = Math.floor((countdown % 3600) / 60);
+      const seconds = countdown % 60;
+      
+      document.getElementById('timer').innerText = 
+        `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      
+      if (countdown <= 0) {
+        clearInterval(timerInterval);
+      } else {
+        countdown--;
+      }
+    }
+    
+    // Contador de pessoas (diminui aleatoriamente)
+    let peopleCount = 20;
+    setInterval(() => {
+      if (peopleCount > 3) {
+        peopleCount -= Math.floor(Math.random() * 2) + 1;
+        document.getElementById('counter').textContent = peopleCount;
+      }
+    }, 15000);
+    
+    // Atualiza o número de pessoas que resgataram
+    let userCount = 47;
+    setInterval(() => {
+      userCount += Math.floor(Math.random() * 3) + 1;
+      document.querySelector('.social-proof strong').textContent = userCount + " mulheres";
+    }, 8000);
+    
+    // Iniciar contadores
+    updateTimer();
+    const timerInterval = setInterval(updateTimer, 1000);
+  </script>
 </body>
 </html>
