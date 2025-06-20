@@ -27,13 +27,15 @@
     }
 
     .urgent-banner {
-      background: #e74c3c;
+      background: linear-gradient(to right, #f76b8a, #e74c3c);
       color: white;
       text-align: center;
-      padding: 14px;
-      font-weight: 700;
-      font-size: 17px;
-      box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+      padding: 18px;
+      font-weight: 800;
+      font-size: 20px;
+      box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .container {
@@ -129,13 +131,13 @@
     }
 
     .social-proof {
-      font-size: 16px;
+      font-size: 18px;
       color: #555;
       margin-bottom: 25px;
-      padding: 14px;
+      padding: 16px;
       background: #f8f9fa;
       border-radius: 10px;
-      font-weight: 600;
+      font-weight: 700;
       text-align: center;
       border: 1px solid #eee;
     }
@@ -181,15 +183,17 @@
       background: linear-gradient(to right, #f76b8a, #e74c3c);
       color: white;
       border: none;
-      padding: 18px;
-      font-size: 19px;
-      font-weight: 700;
-      border-radius: 10px;
+      padding: 20px;
+      font-size: 22px;
+      font-weight: 800;
+      border-radius: 12px;
       cursor: pointer;
       transition: all 0.3s;
-      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+      box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
       text-align: center;
       text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .cta-button:hover {
@@ -257,6 +261,23 @@
     <h1>DOMINE SUA ANSIEDADE ALIMENTAR EM 7 DIAS!</h1>
     <p class="subtitle">Guia 6 + Desafio 7 Dias GRÁTIS + Bônus Exclusivo</p>
     
+    <form class="email-form" action="https://formsubmit.co/blog.digitalrenda@gmail.com" method="POST">
+      <input type="hidden" name="_next" value="https://bonus7x7.vercel.app/obrigado.html">
+      <input type="hidden" name="_subject" value="Novo lead - Plano 7x7">
+      <input type="hidden" name="_template" value="table">
+      
+      <div class="form-group">
+        <label for="email">Digite seu melhor e-mail:</label>
+        <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+      </div>
+      
+      <button type="submit" class="cta-button pulse">🚀 QUERO MEU BÔNUS GRÁTIS AGORA!</button>
+    </form>
+
+    <div class="social-proof">
+      <strong>✨ 47 mulheres</strong> já resgataram este bônus hoje!
+    </div>
+    
     <div class="bonus-box">
       <div class="bonus-items">
         <div class="bonus-item">
@@ -288,23 +309,6 @@
         ⏰ OFERTA VÁLIDA POR: <span id="timer">24:00:00</span>
       </div>
     </div>
-
-    <div class="social-proof">
-      <strong>✨ 47 mulheres</strong> já resgataram este bônus hoje!
-    </div>
-
-    <form class="email-form" action="https://formsubmit.co/blog.digitalrenda@gmail.com" method="POST">
-      <input type="hidden" name="_next" value="https://bonus7x7.vercel.app/obrigado.html">
-      <input type="hidden" name="_subject" value="Novo lead - Plano 7x7">
-      <input type="hidden" name="_template" value="table">
-      
-      <div class="form-group">
-        <label for="email">Digite seu melhor e-mail:</label>
-        <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
-      </div>
-      
-      <button type="submit" class="cta-button pulse">🚀 QUERO MEU BÔNUS GRÁTIS AGORA!</button>
-    </form>
 
     <div class="security">
       🔒 Seus dados estão 100% seguros. Respeitamos sua privacidade.
@@ -355,3 +359,4 @@
   </script>
 </body>
 </html>
+
