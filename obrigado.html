@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seu Bônus Está Liberado 🎁</title>
+  <title>🎁 Seu Bônus Está Liberado! | Alimentação Consciente para Mulheres Ocupadas</title>
   <!-- Favicons iguais aos da captura -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -30,7 +30,7 @@
     }
 
     .urgent-banner {
-      background: #e74c3c;
+      background: linear-gradient(to right, #f76b8a, #e74c3c);
       color: white;
       text-align: center;
       padding: 14px;
@@ -74,6 +74,7 @@
       font-size: 1.1rem;
       margin-bottom: 20px;
       text-align: center;
+      color: #555;
     }
 
     .bonus-box {
@@ -82,13 +83,55 @@
       border-radius: 12px;
       padding: 25px;
       margin: 25px 0;
+      text-align: center;
     }
 
-    .valor-bonus {
-      font-size: 18px;
-      color: #b03558;
-      font-weight: 600;
-      text-align: center;
+    .bonus-image {
+      max-width: 60%;
+      margin: 0 auto 20px;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .bonus-title {
+      font-size: 22px;
+      color: #e74c3c;
+      margin-bottom: 15px;
+      font-weight: 800;
+    }
+
+    .bonus-description {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #555;
+      text-align: left;
+    }
+
+    .benefits {
+      text-align: left;
+      margin: 20px 0;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .benefit-icon {
+      min-width: 24px;
+      height: 24px;
+      background: #f76b8a;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 10px;
+      font-size: 14px;
+      flex-shrink: 0;
     }
 
     .cta-button {
@@ -113,37 +156,65 @@
 
     .cta-button:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
+      box-shadow: 0 12px 30px rgba(231, 76, 60, 0.6);
     }
 
-    .cta-secundaria {
+    .upsell-box {
       margin-top: 20px;
       font-size: 18px;
       color: #555;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       background: #f8f9fa;
       border-radius: 10px;
+      border-left: 4px solid #e74c3c;
     }
 
-    .cta-secundaria a {
-      display: inline-block;
-      background: #f0f0f0;
+    .upsell-title {
+      font-size: 20px;
+      color: #b03558;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .upsell-benefits {
+      text-align: left;
+      margin: 15px 0;
+    }
+
+    .upsell-benefit {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .upsell-icon {
       color: #e74c3c;
       font-weight: bold;
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      transition: all 0.3s;
-      border: 2px solid #e74c3c;
-      margin-top: 10px;
+      margin-right: 10px;
     }
 
-    .cta-secundaria a:hover {
-      background: #e74c3c;
+    .upsell-button {
+      display: inline-block;
+      background: #2c3e50;
       color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 8px;
+      transition: all 0.3s;
+      margin-top: 15px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .upsell-button:hover {
+      background: #1a252f;
       transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(231, 76, 60, 0.2);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .security {
@@ -196,6 +267,10 @@
         font-size: 17px;
         padding: 16px;
       }
+      
+      .bonus-image {
+        max-width: 80%;
+      }
     }
   </style>
 </head>
@@ -205,22 +280,63 @@
   </div>
   
   <div class="container">
-    <h1>🎁 Pronto! Seu bônus está liberado</h1>
-    <p>Você já pode acessar o material completo e começar sua transformação com leveza e consciência.</p>
-
+    <h1>🎁 Seu Guia Está Pronto!</h1>
+    <p>Aqui está seu acesso imediato ao bônus exclusivo:</p>
+    
     <div class="bonus-box">
-      <p class="valor-bonus">
-        Este material, se vendido separadamente, poderia custar <strong>R$27</strong> — mas hoje ele é seu gratuitamente.
-      </p>
+      <div class="bonus-title">Alimentação Consciente para Mulheres Ocupadas</div>
+      <img src="https://via.placeholder.com/300x400/fdf6f8/555555?text=PDF+Bônus" alt="Capa do Guia" class="bonus-image">
+      
+      <div class="benefits">
+        <p class="bonus-description">Com este guia prático você vai:</p>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">✓</div>
+          <div>Organizar sua alimentação em menos de 2 horas por semana</div>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">✓</div>
+          <div>Controlar a compulsão alimentar na TPM e ansiedade</div>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">✓</div>
+          <div>Economizar até 30% nas compras de supermercado</div>
+        </div>
+      </div>
     </div>
 
     <a class="cta-button pulse" href="https://drive.google.com/file/d/1WswEWedEzgIqLmQdNuP_QZWoNisBMUr_/view" target="_blank">
-      BAIXAR MEU BÔNUS AGORA
+      BAIXAR MEU GUIA AGORA (PDF)
     </a>
 
-    <div class="cta-secundaria">
-      👀 Não quer esperar até o final do material?<br />
-      <a href="https://plano7x7.vercel.app">Clique aqui para conhecer o Plano 7x7 agora mesmo</a>
+    <div class="upsell-box">
+      <div class="upsell-title">Quer ir além?</div>
+      <p>Enquanto seu guia é enviado, conheça o <strong>Plano 7x7 Completo</strong> que já ajudou mais de 1.200 mulheres:</p>
+      
+      <div class="upsell-benefits">
+        <div class="upsell-benefit">
+          <span class="upsell-icon">►</span>
+          <span>21 receitas express para TPM e dias caóticos</span>
+        </div>
+        <div class="upsell-benefit">
+          <span class="upsell-icon">►</span>
+          <span>Listas de compras editáveis + Planner de congelamento</span>
+        </div>
+        <div class="upsell-benefit">
+          <span class="upsell-icon">►</span>
+          <span>Acesso ao Grupo VIP com nutricionista</span>
+        </div>
+      </div>
+      
+      <a href="https://plano7x7.vercel.app" class="upsell-button">
+        CONHEÇA O PLANO 7X7 COMPLETO
+      </a>
+      
+      <p style="margin-top: 15px; font-size: 16px;">
+        <strong>Oferta especial:</strong> De R$147 por apenas R$97
+      </p>
     </div>
 
     <div class="security">
@@ -233,4 +349,3 @@
   </div>
 </body>
 </html>
-
