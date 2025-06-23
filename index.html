@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BÔNUS GRÁTIS: Controle Sua Ansiedade Alimentar em 7 Dias | Plano 7x7</title>
+  <title>BÔNUS: Guia Prático para Mulheres Ocupadas | Plano 7x7</title>
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -76,25 +76,32 @@
       text-align: center;
     }
 
-    .bonus-box {
+    .pain-box {
       background: #fdf6f8;
-      border: 2px dashed #f76b8a;
       border-radius: 12px;
       padding: 25px;
       margin-bottom: 30px;
     }
 
-    .bonus-items {
-      text-align: left;
+    .pain-title {
+      text-align: center;
+      font-size: 20px;
+      color: #b03558;
+      margin-bottom: 20px;
+      font-weight: 700;
     }
 
-    .bonus-item {
+    .pain-item {
       display: flex;
       align-items: flex-start;
       margin-bottom: 18px;
+      padding: 15px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
     }
 
-    .bonus-icon {
+    .pain-icon {
       min-width: 36px;
       height: 36px;
       background: #f76b8a;
@@ -106,17 +113,53 @@
       font-weight: bold;
       font-size: 20px;
       margin-right: 15px;
+      flex-shrink: 0;
     }
 
-    .bonus-content h3 {
+    .pain-content h3 {
       font-size: 18px;
       margin-bottom: 4px;
       color: #b03558;
     }
 
-    .bonus-content p {
+    .pain-content p {
       font-size: 15px;
       color: #666;
+    }
+
+    .solution-highlight {
+      color: #e74c3c;
+      font-weight: 700;
+    }
+
+    .bonus-box {
+      background: #fdf6f8;
+      border: 2px dashed #f76b8a;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .bonus-title {
+      font-size: 22px;
+      color: #e74c3c;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .bonus-image {
+      max-width: 60%;
+      margin: 0 auto 20px;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .bonus-description {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #555;
     }
 
     .countdown {
@@ -198,7 +241,7 @@
 
     .cta-button:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
+      box-shadow: 0 12px 30px rgba(231, 76, 60, 0.6);
     }
 
     .security {
@@ -249,6 +292,10 @@
         font-size: 17px;
         padding: 16px;
       }
+      
+      .bonus-image {
+        max-width: 80%;
+      }
     }
   </style>
 </head>
@@ -258,56 +305,65 @@
   </div>
   
   <div class="container">
-    <h1>DOMINE SUA ANSIEDADE ALIMENTAR EM 7 DIAS!</h1>
-    <p class="subtitle">Guia 6 + Desafio 7 Dias GRÁTIS + Bônus Exclusivo</p>
+    <h1>Alimentação Consciente para Mulheres Ocupadas</h1>
+    <p class="subtitle">Domine sua relação com a comida mesmo na correria do dia a dia</p>
     
+    <div class="pain-box">
+      <div class="pain-title">Você se identifica com alguma dessas situações?</div>
+      
+      <div class="pain-item">
+        <div class="pain-icon">1</div>
+        <div class="pain-content">
+          <h3>Não tenho tempo para cozinhar</h3>
+          <p>Acabo comendo qualquer coisa rápida e me sentindo mal depois</p>
+        </div>
+      </div>
+      
+      <div class="pain-item">
+        <div class="pain-icon">2</div>
+        <div class="pain-content">
+          <h3>Como por ansiedade/TPM</h3>
+          <p>Desconto minhas emoções na comida e me arrependo depois</p>
+        </div>
+      </div>
+      
+      <div class="pain-item">
+        <div class="pain-icon">3</div>
+        <div class="pain-content">
+          <h3>Gasto muito no supermercado</h3>
+          <p>Compro sem planejar e acabo desperdiçando comida e dinheiro</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bonus-box">
+      <div class="bonus-title">SEU BÔNUS GRATUITO:</div>
+      <img src="https://via.placeholder.com/300x400/fdf6f8/555555?text=PDF+Bônus" alt="Alimentação Consciente para Mulheres Ocupadas" class="bonus-image">
+      <div class="bonus-description">
+        <p><span class="solution-highlight">Guia Prático:</span> Alimentação Consciente para Mulheres Ocupadas</p>
+        <p>Descubra como transformar sua relação com a comida mesmo na correria do dia a dia</p>
+      </div>
+    </div>
+    
+    <div class="social-proof">
+      <strong>✨ 47 mulheres</strong> já resgataram este bônus hoje!
+    </div>
+
     <form class="email-form" action="https://formsubmit.co/blog.digitalrenda@gmail.com" method="POST">
       <input type="hidden" name="_next" value="https://bonus7x7.vercel.app/obrigado.html">
       <input type="hidden" name="_subject" value="Novo lead - Plano 7x7">
       <input type="hidden" name="_template" value="table">
       
       <div class="form-group">
-        <label for="email">Digite seu melhor e-mail:</label>
+        <label for="email">Digite seu melhor e-mail para acesso imediato:</label>
         <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
       </div>
       
-      <button type="submit" class="cta-button pulse">🚀 QUERO MEU BÔNUS GRÁTIS AGORA!</button>
+      <button type="submit" class="cta-button pulse">👇 QUERO MEU BÔNUS GRÁTIS AGORA!</button>
     </form>
-
-    <div class="social-proof">
-      <strong>✨ 47 mulheres</strong> já resgataram este bônus hoje!
-    </div>
     
-    <div class="bonus-box">
-      <div class="bonus-items">
-        <div class="bonus-item">
-          <div class="bonus-icon">6</div>
-          <div class="bonus-content">
-            <h3>Guia 6: Domine a Ansiedade Alimentar</h3>
-            <p>Identifique gatilhos emocionais e quebre o ciclo compulsivo</p>
-          </div>
-        </div>
-        
-        <div class="bonus-item">
-          <div class="bonus-icon">7</div>
-          <div class="bonus-content">
-            <h3>Guia 7: Desafio de 7 Dias</h3>
-            <p>Passo a passo prático para resultados imediatos</p>
-          </div>
-        </div>
-        
-        <div class="bonus-item">
-          <div class="bonus-icon">+</div>
-          <div class="bonus-content">
-            <h3>Bônus: Checklist Anti-Compulsão</h3>
-            <p>Ferramenta prática para dias desafiadores</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="countdown">
-        ⏰ OFERTA VÁLIDA POR: <span id="timer">24:00:00</span>
-      </div>
+    <div class="countdown">
+      ⏰ OFERTA VÁLIDA POR: <span id="timer">24:00:00</span>
     </div>
 
     <div class="security">
@@ -359,4 +415,3 @@
   </script>
 </body>
 </html>
-
